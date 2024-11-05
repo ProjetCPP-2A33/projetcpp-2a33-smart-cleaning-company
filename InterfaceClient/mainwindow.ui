@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>926</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="widget_3" native="true">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>0</y>
+      <width>711</width>
+      <height>431</height>
+     </rect>
+    </property>
+    <widget class="QWidget" name="widget" native="true">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>-1</y>
+       <width>711</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 85, 170);</string>
+     </property>
+     <widget class="QPushButton" name="rechexec">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>40</y>
+        <width>31</width>
+        <height>18</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../../Icons for qt/search.png</normaloff>../../../Icons for qt/search.png</iconset>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="recherche">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>40</y>
+        <width>171</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Recherche.....</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QStackedWidget" name="stack">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>110</y>
+       <width>591</width>
+       <height>281</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <widget class="QWidget" name="page">
+      <widget class="QPushButton" name="refresh">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>31</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../../../Icons for qt/refresh.png</normaloff>../../../Icons for qt/refresh.png</iconset>
+       </property>
+      </widget>
+      <widget class="QTableWidget" name="qtab">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>40</y>
+         <width>541</width>
+         <height>211</height>
+        </rect>
+       </property>
+       <row/>
+       <row/>
+       <row/>
+       <column>
+        <property name="text">
+         <string>idC</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Nom</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Prenom</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>numTel</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Mail</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>typeAffaire</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>nbrAffaire</string>
+        </property>
+       </column>
+       <item row="2" column="0">
+        <property name="text">
+         <string/>
+        </property>
+       </item>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page_2">
+      <widget class="QPushButton" name="ajout">
+       <property name="geometry">
+        <rect>
+         <x>300</x>
+         <y>80</y>
+         <width>80</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Ajouter</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="mod">
+       <property name="geometry">
+        <rect>
+         <x>300</x>
+         <y>110</y>
+         <width>80</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Modier</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="supp">
+       <property name="geometry">
+        <rect>
+         <x>300</x>
+         <y>140</y>
+         <width>80</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Supprimer</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="idc">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>20</y>
+         <width>113</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="nom">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>60</y>
+         <width>113</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="prenom">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>100</y>
+         <width>113</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="numtel">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>140</y>
+         <width>113</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="mail">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>180</y>
+         <width>113</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="typeaff">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>220</y>
+         <width>113</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="nbraff">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>260</y>
+         <width>113</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_7">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>60</y>
+         <width>37</width>
+         <height>12</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Nom</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>37</width>
+         <height>12</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>IdC</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>100</y>
+         <width>37</width>
+         <height>12</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Prenom</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>140</y>
+         <width>37</width>
+         <height>12</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>numTel</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>180</y>
+         <width>37</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Mail</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_5">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>220</y>
+         <width>37</width>
+         <height>12</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>type Affaire</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_6">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>260</y>
+         <width>41</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>nbr Affaire</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="retour">
+       <property name="geometry">
+        <rect>
+         <x>470</x>
+         <y>240</y>
+         <width>80</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Retour</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="pushButton_5">
+     <property name="geometry">
+      <rect>
+       <x>620</x>
+       <y>90</y>
+       <width>81</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../../logo app/logo_sans_slogan-removebg-preview.png</normaloff>../../../logo app/logo_sans_slogan-removebg-preview.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>70</width>
+       <height>70</height>
+      </size>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="icon_only" native="true">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>0</y>
+      <width>131</width>
+      <height>431</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0, 85, 170);</string>
+    </property>
+    <widget class="QPushButton" name="switch1">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>140</y>
+       <width>91</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Ajouter Client</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../../Icons for qt/user-add.png</normaloff>../../../Icons for qt/user-add.png</iconset>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="switch2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>170</y>
+       <width>91</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Supprimer Client</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../../Icons for qt/trash.png</normaloff>../../../Icons for qt/trash.png</iconset>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="switch3">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>200</y>
+       <width>91</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Modifier Client</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../../Icons for qt/add.png</normaloff>../../../Icons for qt/add.png</iconset>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="quitter">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>360</y>
+       <width>91</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Quitter</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../../Icons for qt/exit.png</normaloff>../../../Icons for qt/exit.png</iconset>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="tri">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>230</y>
+       <width>91</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Tri par nbr Affaire</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../../Icons for qt/layers.png</normaloff>../../../Icons for qt/layers.png</iconset>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="menu">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>40</y>
+       <width>51</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Menu</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../../Icons for qt/align-justify.png</normaloff>../../../Icons for qt/align-justify.png</iconset>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="stat">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>260</y>
+       <width>91</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Statistique</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../../Icons for qt/chart-histogram.png</normaloff>../../../Icons for qt/chart-histogram.png</iconset>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="profil">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>330</y>
+       <width>91</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Profil</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../../Icons for qt/user.png</normaloff>../../../Icons for qt/user.png</iconset>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>926</width>
+     <height>17</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
