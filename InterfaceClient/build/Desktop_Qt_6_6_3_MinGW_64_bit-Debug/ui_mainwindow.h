@@ -20,7 +20,7 @@
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStackedWidget>
 #include <QtWidgets/QStatusBar>
-#include <QtWidgets/QTableWidget>
+#include <QtWidgets/QTableView>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -31,12 +31,12 @@ public:
     QWidget *centralwidget;
     QWidget *widget_3;
     QWidget *widget;
-    QPushButton *rechexec;
+    QPushButton *rech;
     QLineEdit *recherche;
     QStackedWidget *stack;
     QWidget *page;
+    QTableView *tab;
     QPushButton *refresh;
-    QTableWidget *qtab;
     QWidget *page_2;
     QPushButton *ajout;
     QPushButton *mod;
@@ -83,12 +83,12 @@ public:
         widget->setObjectName("widget");
         widget->setGeometry(QRect(0, -1, 711, 91));
         widget->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 85, 170);"));
-        rechexec = new QPushButton(widget);
-        rechexec->setObjectName("rechexec");
-        rechexec->setGeometry(QRect(400, 40, 31, 18));
+        rech = new QPushButton(widget);
+        rech->setObjectName("rech");
+        rech->setGeometry(QRect(400, 40, 81, 18));
         QIcon icon;
         icon.addFile(QString::fromUtf8("../../../Icons for qt/search.png"), QSize(), QIcon::Normal, QIcon::Off);
-        rechexec->setIcon(icon);
+        rech->setIcon(icon);
         recherche = new QLineEdit(widget);
         recherche->setObjectName("recherche");
         recherche->setGeometry(QRect(220, 40, 171, 20));
@@ -97,35 +97,12 @@ public:
         stack->setGeometry(QRect(20, 110, 591, 281));
         page = new QWidget();
         page->setObjectName("page");
+        tab = new QTableView(page);
+        tab->setObjectName("tab");
+        tab->setGeometry(QRect(50, 40, 521, 221));
         refresh = new QPushButton(page);
         refresh->setObjectName("refresh");
-        refresh->setGeometry(QRect(10, 10, 31, 20));
-        QIcon icon1;
-        icon1.addFile(QString::fromUtf8("../../../Icons for qt/refresh.png"), QSize(), QIcon::Normal, QIcon::Off);
-        refresh->setIcon(icon1);
-        qtab = new QTableWidget(page);
-        if (qtab->columnCount() < 7)
-            qtab->setColumnCount(7);
-        QTableWidgetItem *__qtablewidgetitem = new QTableWidgetItem();
-        qtab->setHorizontalHeaderItem(0, __qtablewidgetitem);
-        QTableWidgetItem *__qtablewidgetitem1 = new QTableWidgetItem();
-        qtab->setHorizontalHeaderItem(1, __qtablewidgetitem1);
-        QTableWidgetItem *__qtablewidgetitem2 = new QTableWidgetItem();
-        qtab->setHorizontalHeaderItem(2, __qtablewidgetitem2);
-        QTableWidgetItem *__qtablewidgetitem3 = new QTableWidgetItem();
-        qtab->setHorizontalHeaderItem(3, __qtablewidgetitem3);
-        QTableWidgetItem *__qtablewidgetitem4 = new QTableWidgetItem();
-        qtab->setHorizontalHeaderItem(4, __qtablewidgetitem4);
-        QTableWidgetItem *__qtablewidgetitem5 = new QTableWidgetItem();
-        qtab->setHorizontalHeaderItem(5, __qtablewidgetitem5);
-        QTableWidgetItem *__qtablewidgetitem6 = new QTableWidgetItem();
-        qtab->setHorizontalHeaderItem(6, __qtablewidgetitem6);
-        if (qtab->rowCount() < 3)
-            qtab->setRowCount(3);
-        QTableWidgetItem *__qtablewidgetitem7 = new QTableWidgetItem();
-        qtab->setItem(2, 0, __qtablewidgetitem7);
-        qtab->setObjectName("qtab");
-        qtab->setGeometry(QRect(40, 40, 541, 211));
+        refresh->setGeometry(QRect(20, 10, 80, 18));
         stack->addWidget(page);
         page_2 = new QWidget();
         page_2->setObjectName("page_2");
@@ -176,7 +153,7 @@ public:
         label_4->setGeometry(QRect(10, 180, 37, 21));
         label_5 = new QLabel(page_2);
         label_5->setObjectName("label_5");
-        label_5->setGeometry(QRect(10, 220, 37, 12));
+        label_5->setGeometry(QRect(10, 220, 51, 16));
         label_6 = new QLabel(page_2);
         label_6->setObjectName("label_6");
         label_6->setGeometry(QRect(10, 260, 41, 20));
@@ -187,9 +164,9 @@ public:
         pushButton_5 = new QPushButton(widget_3);
         pushButton_5->setObjectName("pushButton_5");
         pushButton_5->setGeometry(QRect(620, 90, 81, 71));
-        QIcon icon2;
-        icon2.addFile(QString::fromUtf8("../../../logo app/logo_sans_slogan-removebg-preview.png"), QSize(), QIcon::Normal, QIcon::Off);
-        pushButton_5->setIcon(icon2);
+        QIcon icon1;
+        icon1.addFile(QString::fromUtf8("../../../logo app/logo_sans_slogan-removebg-preview.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButton_5->setIcon(icon1);
         pushButton_5->setIconSize(QSize(70, 70));
         icon_only = new QWidget(centralwidget);
         icon_only->setObjectName("icon_only");
@@ -198,51 +175,51 @@ public:
         switch1 = new QPushButton(icon_only);
         switch1->setObjectName("switch1");
         switch1->setGeometry(QRect(20, 140, 91, 18));
-        QIcon icon3;
-        icon3.addFile(QString::fromUtf8("../../../Icons for qt/user-add.png"), QSize(), QIcon::Normal, QIcon::Off);
-        switch1->setIcon(icon3);
+        QIcon icon2;
+        icon2.addFile(QString::fromUtf8("../../../Icons for qt/user-add.png"), QSize(), QIcon::Normal, QIcon::Off);
+        switch1->setIcon(icon2);
         switch2 = new QPushButton(icon_only);
         switch2->setObjectName("switch2");
         switch2->setGeometry(QRect(20, 170, 91, 18));
-        QIcon icon4;
-        icon4.addFile(QString::fromUtf8("../../../Icons for qt/trash.png"), QSize(), QIcon::Normal, QIcon::Off);
-        switch2->setIcon(icon4);
+        QIcon icon3;
+        icon3.addFile(QString::fromUtf8("../../../Icons for qt/trash.png"), QSize(), QIcon::Normal, QIcon::Off);
+        switch2->setIcon(icon3);
         switch3 = new QPushButton(icon_only);
         switch3->setObjectName("switch3");
         switch3->setGeometry(QRect(20, 200, 91, 18));
-        QIcon icon5;
-        icon5.addFile(QString::fromUtf8("../../../Icons for qt/add.png"), QSize(), QIcon::Normal, QIcon::Off);
-        switch3->setIcon(icon5);
+        QIcon icon4;
+        icon4.addFile(QString::fromUtf8("../../../Icons for qt/add.png"), QSize(), QIcon::Normal, QIcon::Off);
+        switch3->setIcon(icon4);
         quitter = new QPushButton(icon_only);
         quitter->setObjectName("quitter");
         quitter->setGeometry(QRect(20, 360, 91, 18));
-        QIcon icon6;
-        icon6.addFile(QString::fromUtf8("../../../Icons for qt/exit.png"), QSize(), QIcon::Normal, QIcon::Off);
-        quitter->setIcon(icon6);
+        QIcon icon5;
+        icon5.addFile(QString::fromUtf8("../../../Icons for qt/exit.png"), QSize(), QIcon::Normal, QIcon::Off);
+        quitter->setIcon(icon5);
         tri = new QPushButton(icon_only);
         tri->setObjectName("tri");
         tri->setGeometry(QRect(20, 230, 91, 18));
-        QIcon icon7;
-        icon7.addFile(QString::fromUtf8("../../../Icons for qt/layers.png"), QSize(), QIcon::Normal, QIcon::Off);
-        tri->setIcon(icon7);
+        QIcon icon6;
+        icon6.addFile(QString::fromUtf8("../../../Icons for qt/layers.png"), QSize(), QIcon::Normal, QIcon::Off);
+        tri->setIcon(icon6);
         menu = new QPushButton(icon_only);
         menu->setObjectName("menu");
         menu->setGeometry(QRect(40, 40, 51, 18));
-        QIcon icon8;
-        icon8.addFile(QString::fromUtf8("../../../Icons for qt/align-justify.png"), QSize(), QIcon::Normal, QIcon::Off);
-        menu->setIcon(icon8);
+        QIcon icon7;
+        icon7.addFile(QString::fromUtf8("../../../Icons for qt/align-justify.png"), QSize(), QIcon::Normal, QIcon::Off);
+        menu->setIcon(icon7);
         stat = new QPushButton(icon_only);
         stat->setObjectName("stat");
         stat->setGeometry(QRect(20, 260, 91, 18));
-        QIcon icon9;
-        icon9.addFile(QString::fromUtf8("../../../Icons for qt/chart-histogram.png"), QSize(), QIcon::Normal, QIcon::Off);
-        stat->setIcon(icon9);
+        QIcon icon8;
+        icon8.addFile(QString::fromUtf8("../../../Icons for qt/chart-histogram.png"), QSize(), QIcon::Normal, QIcon::Off);
+        stat->setIcon(icon8);
         profil = new QPushButton(icon_only);
         profil->setObjectName("profil");
         profil->setGeometry(QRect(20, 330, 91, 18));
-        QIcon icon10;
-        icon10.addFile(QString::fromUtf8("../../../Icons for qt/user.png"), QSize(), QIcon::Normal, QIcon::Off);
-        profil->setIcon(icon10);
+        QIcon icon9;
+        icon9.addFile(QString::fromUtf8("../../../Icons for qt/user.png"), QSize(), QIcon::Normal, QIcon::Off);
+        profil->setIcon(icon9);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
@@ -254,7 +231,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stack->setCurrentIndex(1);
+        stack->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -263,28 +240,9 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        rechexec->setText(QString());
-        recherche->setText(QCoreApplication::translate("MainWindow", "Recherche.....", nullptr));
-        refresh->setText(QString());
-        QTableWidgetItem *___qtablewidgetitem = qtab->horizontalHeaderItem(0);
-        ___qtablewidgetitem->setText(QCoreApplication::translate("MainWindow", "idC", nullptr));
-        QTableWidgetItem *___qtablewidgetitem1 = qtab->horizontalHeaderItem(1);
-        ___qtablewidgetitem1->setText(QCoreApplication::translate("MainWindow", "Nom", nullptr));
-        QTableWidgetItem *___qtablewidgetitem2 = qtab->horizontalHeaderItem(2);
-        ___qtablewidgetitem2->setText(QCoreApplication::translate("MainWindow", "Prenom", nullptr));
-        QTableWidgetItem *___qtablewidgetitem3 = qtab->horizontalHeaderItem(3);
-        ___qtablewidgetitem3->setText(QCoreApplication::translate("MainWindow", "numTel", nullptr));
-        QTableWidgetItem *___qtablewidgetitem4 = qtab->horizontalHeaderItem(4);
-        ___qtablewidgetitem4->setText(QCoreApplication::translate("MainWindow", "Mail", nullptr));
-        QTableWidgetItem *___qtablewidgetitem5 = qtab->horizontalHeaderItem(5);
-        ___qtablewidgetitem5->setText(QCoreApplication::translate("MainWindow", "typeAffaire", nullptr));
-        QTableWidgetItem *___qtablewidgetitem6 = qtab->horizontalHeaderItem(6);
-        ___qtablewidgetitem6->setText(QCoreApplication::translate("MainWindow", "nbrAffaire", nullptr));
-
-        const bool __sortingEnabled = qtab->isSortingEnabled();
-        qtab->setSortingEnabled(false);
-        qtab->setSortingEnabled(__sortingEnabled);
-
+        rech->setText(QCoreApplication::translate("MainWindow", "Rechercher", nullptr));
+        recherche->setText(QString());
+        refresh->setText(QCoreApplication::translate("MainWindow", "Actualiser", nullptr));
         ajout->setText(QCoreApplication::translate("MainWindow", "Ajouter", nullptr));
         mod->setText(QCoreApplication::translate("MainWindow", "Modier", nullptr));
         supp->setText(QCoreApplication::translate("MainWindow", "Supprimer", nullptr));

@@ -19,8 +19,16 @@ public:
     ~MainWindow();
 
 private slots:
-    void onAddClient();
-    void onShowClients();
+    void ajouterClient();
+    void supprimerClient();
+    bool verif(int id,int numTel,QString mail,int nbrAff);
+    void modifierClient();
+    bool verif1(int id,int numTel,QString mail,int nbrAff);
+    void afficher();
+    void tri();
+    void recherche();
+    void page1Wid();
+    void page2Wid();
 
 private:
     Ui::MainWindow *ui;

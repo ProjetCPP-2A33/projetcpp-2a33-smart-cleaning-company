@@ -39,31 +39,79 @@ namespace {
 struct qt_meta_stringdata_CLASSMainWindowENDCLASS_t {};
 constexpr auto qt_meta_stringdata_CLASSMainWindowENDCLASS = QtMocHelpers::stringData(
     "MainWindow",
-    "onAddClient",
+    "ajouterClient",
     "",
-    "onShowClients"
+    "supprimerClient",
+    "verif",
+    "id",
+    "numTel",
+    "mail",
+    "nbrAff",
+    "modifierClient",
+    "verif1",
+    "afficher",
+    "tri",
+    "recherche",
+    "page1Wid",
+    "page2Wid"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSMainWindowENDCLASS_t {
-    uint offsetsAndSizes[8];
+    uint offsetsAndSizes[32];
     char stringdata0[11];
-    char stringdata1[12];
+    char stringdata1[14];
     char stringdata2[1];
-    char stringdata3[14];
+    char stringdata3[16];
+    char stringdata4[6];
+    char stringdata5[3];
+    char stringdata6[7];
+    char stringdata7[5];
+    char stringdata8[7];
+    char stringdata9[15];
+    char stringdata10[7];
+    char stringdata11[9];
+    char stringdata12[4];
+    char stringdata13[10];
+    char stringdata14[9];
+    char stringdata15[9];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSMainWindowENDCLASS_t::offsetsAndSizes) + ofs), len 
 Q_CONSTINIT static const qt_meta_stringdata_CLASSMainWindowENDCLASS_t qt_meta_stringdata_CLASSMainWindowENDCLASS = {
     {
         QT_MOC_LITERAL(0, 10),  // "MainWindow"
-        QT_MOC_LITERAL(11, 11),  // "onAddClient"
-        QT_MOC_LITERAL(23, 0),  // ""
-        QT_MOC_LITERAL(24, 13)   // "onShowClients"
+        QT_MOC_LITERAL(11, 13),  // "ajouterClient"
+        QT_MOC_LITERAL(25, 0),  // ""
+        QT_MOC_LITERAL(26, 15),  // "supprimerClient"
+        QT_MOC_LITERAL(42, 5),  // "verif"
+        QT_MOC_LITERAL(48, 2),  // "id"
+        QT_MOC_LITERAL(51, 6),  // "numTel"
+        QT_MOC_LITERAL(58, 4),  // "mail"
+        QT_MOC_LITERAL(63, 6),  // "nbrAff"
+        QT_MOC_LITERAL(70, 14),  // "modifierClient"
+        QT_MOC_LITERAL(85, 6),  // "verif1"
+        QT_MOC_LITERAL(92, 8),  // "afficher"
+        QT_MOC_LITERAL(101, 3),  // "tri"
+        QT_MOC_LITERAL(105, 9),  // "recherche"
+        QT_MOC_LITERAL(115, 8),  // "page1Wid"
+        QT_MOC_LITERAL(124, 8)   // "page2Wid"
     },
     "MainWindow",
-    "onAddClient",
+    "ajouterClient",
     "",
-    "onShowClients"
+    "supprimerClient",
+    "verif",
+    "id",
+    "numTel",
+    "mail",
+    "nbrAff",
+    "modifierClient",
+    "verif1",
+    "afficher",
+    "tri",
+    "recherche",
+    "page1Wid",
+    "page2Wid"
 };
 #undef QT_MOC_LITERAL
 #endif // !QT_MOC_HAS_STRING_DATA
@@ -75,7 +123,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       2,   14, // methods
+      10,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -83,10 +131,26 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   26,    2, 0x08,    1 /* Private */,
-       3,    0,   27,    2, 0x08,    2 /* Private */,
+       1,    0,   74,    2, 0x08,    1 /* Private */,
+       3,    0,   75,    2, 0x08,    2 /* Private */,
+       4,    4,   76,    2, 0x08,    3 /* Private */,
+       9,    0,   85,    2, 0x08,    8 /* Private */,
+      10,    4,   86,    2, 0x08,    9 /* Private */,
+      11,    0,   95,    2, 0x08,   14 /* Private */,
+      12,    0,   96,    2, 0x08,   15 /* Private */,
+      13,    0,   97,    2, 0x08,   16 /* Private */,
+      14,    0,   98,    2, 0x08,   17 /* Private */,
+      15,    0,   99,    2, 0x08,   18 /* Private */,
 
  // slots: parameters
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Bool, QMetaType::Int, QMetaType::Int, QMetaType::QString, QMetaType::Int,    5,    6,    7,    8,
+    QMetaType::Void,
+    QMetaType::Bool, QMetaType::Int, QMetaType::Int, QMetaType::QString, QMetaType::Int,    5,    6,    7,    8,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
 
@@ -102,9 +166,33 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
     qt_incomplete_metaTypeArray<qt_meta_stringdata_CLASSMainWindowENDCLASS_t,
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<MainWindow, std::true_type>,
-        // method 'onAddClient'
+        // method 'ajouterClient'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'onShowClients'
+        // method 'supprimerClient'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'verif'
+        QtPrivate::TypeAndForceComplete<bool, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        // method 'modifierClient'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'verif1'
+        QtPrivate::TypeAndForceComplete<bool, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        // method 'afficher'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'tri'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'recherche'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'page1Wid'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'page2Wid'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -116,12 +204,21 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         auto *_t = static_cast<MainWindow *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->onAddClient(); break;
-        case 1: _t->onShowClients(); break;
+        case 0: _t->ajouterClient(); break;
+        case 1: _t->supprimerClient(); break;
+        case 2: { bool _r = _t->verif((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[4])));
+            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
+        case 3: _t->modifierClient(); break;
+        case 4: { bool _r = _t->verif1((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[4])));
+            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
+        case 5: _t->afficher(); break;
+        case 6: _t->tri(); break;
+        case 7: _t->recherche(); break;
+        case 8: _t->page1Wid(); break;
+        case 9: _t->page2Wid(); break;
         default: ;
         }
     }
-    (void)_a;
 }
 
 const QMetaObject *MainWindow::metaObject() const
@@ -143,13 +240,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 2)
+        if (_id < 10)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 2;
+        _id -= 10;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 2)
+        if (_id < 10)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 2;
+        _id -= 10;
     }
     return _id;
 }

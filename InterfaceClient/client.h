@@ -6,6 +6,7 @@
 #include <QPushButton>
 #include <QMessageBox>
 #include <QTableWidget>
+#include <QStackedWidget>
 
 using namespace std;
 
@@ -44,8 +45,10 @@ public:
     //Fonctionnalités de base relatives à l'entité Client
     bool ajouter();
     QSqlQueryModel * afficher();
-    void afficherTableWidget(QTableWidget *tableWidget, QSqlQueryModel *model);
     bool supprimer(int);
+    bool modifier(int,QString,QString,int,QString,QString,int);
+    QSqlQueryModel * tri();
+    QSqlQueryModel * recherche(int);
 
 };
 
