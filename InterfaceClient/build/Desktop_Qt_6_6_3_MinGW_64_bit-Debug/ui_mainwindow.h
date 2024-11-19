@@ -12,6 +12,8 @@
 #include <QtCore/QVariant>
 #include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QComboBox>
+#include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
@@ -33,10 +35,16 @@ public:
     QWidget *widget;
     QPushButton *rech;
     QLineEdit *recherche;
+    QComboBox *combo;
     QStackedWidget *stack;
     QWidget *page;
     QTableView *tab;
     QPushButton *refresh;
+    QPushButton *pdf;
+    QLineEdit *idred;
+    QLabel *label_8;
+    QLabel *reduction;
+    QPushButton *calcred;
     QWidget *page_2;
     QPushButton *ajout;
     QPushButton *mod;
@@ -56,16 +64,24 @@ public:
     QLabel *label_5;
     QLabel *label_6;
     QPushButton *retour;
+    QWidget *page_3;
+    QGraphicsView *graph;
+    QPushButton *affgraph;
+    QPushButton *retour1;
+    QWidget *page_4;
+    QLabel *label_9;
+    QLineEdit *mail_3;
+    QPushButton *envoyer;
+    QPushButton *retour2;
     QPushButton *pushButton_5;
     QWidget *icon_only;
     QPushButton *switch1;
-    QPushButton *switch2;
-    QPushButton *switch3;
     QPushButton *quitter;
     QPushButton *tri;
     QPushButton *menu;
-    QPushButton *stat;
+    QPushButton *bstat;
     QPushButton *profil;
+    QPushButton *mailing;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -85,24 +101,45 @@ public:
         widget->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 85, 170);"));
         rech = new QPushButton(widget);
         rech->setObjectName("rech");
-        rech->setGeometry(QRect(400, 40, 81, 18));
+        rech->setGeometry(QRect(420, 40, 81, 18));
         QIcon icon;
         icon.addFile(QString::fromUtf8("../../../Icons for qt/search.png"), QSize(), QIcon::Normal, QIcon::Off);
         rech->setIcon(icon);
         recherche = new QLineEdit(widget);
         recherche->setObjectName("recherche");
-        recherche->setGeometry(QRect(220, 40, 171, 20));
+        recherche->setGeometry(QRect(230, 40, 171, 20));
+        combo = new QComboBox(widget);
+        combo->addItem(QString());
+        combo->addItem(QString());
+        combo->addItem(QString());
+        combo->setObjectName("combo");
+        combo->setGeometry(QRect(130, 40, 81, 22));
         stack = new QStackedWidget(widget_3);
         stack->setObjectName("stack");
-        stack->setGeometry(QRect(20, 110, 591, 281));
+        stack->setGeometry(QRect(20, 110, 591, 291));
         page = new QWidget();
         page->setObjectName("page");
         tab = new QTableView(page);
         tab->setObjectName("tab");
-        tab->setGeometry(QRect(50, 40, 521, 221));
+        tab->setGeometry(QRect(50, 40, 521, 181));
         refresh = new QPushButton(page);
         refresh->setObjectName("refresh");
         refresh->setGeometry(QRect(20, 10, 80, 18));
+        pdf = new QPushButton(page);
+        pdf->setObjectName("pdf");
+        pdf->setGeometry(QRect(140, 10, 80, 18));
+        idred = new QLineEdit(page);
+        idred->setObjectName("idred");
+        idred->setGeometry(QRect(140, 240, 113, 20));
+        label_8 = new QLabel(page);
+        label_8->setObjectName("label_8");
+        label_8->setGeometry(QRect(120, 240, 16, 16));
+        reduction = new QLabel(page);
+        reduction->setObjectName("reduction");
+        reduction->setGeometry(QRect(310, 240, 141, 21));
+        calcred = new QPushButton(page);
+        calcred->setObjectName("calcred");
+        calcred->setGeometry(QRect(240, 270, 80, 18));
         stack->addWidget(page);
         page_2 = new QWidget();
         page_2->setObjectName("page_2");
@@ -161,6 +198,33 @@ public:
         retour->setObjectName("retour");
         retour->setGeometry(QRect(470, 240, 80, 18));
         stack->addWidget(page_2);
+        page_3 = new QWidget();
+        page_3->setObjectName("page_3");
+        graph = new QGraphicsView(page_3);
+        graph->setObjectName("graph");
+        graph->setGeometry(QRect(10, 10, 561, 241));
+        affgraph = new QPushButton(page_3);
+        affgraph->setObjectName("affgraph");
+        affgraph->setGeometry(QRect(510, 260, 80, 18));
+        retour1 = new QPushButton(page_3);
+        retour1->setObjectName("retour1");
+        retour1->setGeometry(QRect(420, 260, 80, 18));
+        stack->addWidget(page_3);
+        page_4 = new QWidget();
+        page_4->setObjectName("page_4");
+        label_9 = new QLabel(page_4);
+        label_9->setObjectName("label_9");
+        label_9->setGeometry(QRect(40, 30, 111, 21));
+        mail_3 = new QLineEdit(page_4);
+        mail_3->setObjectName("mail_3");
+        mail_3->setGeometry(QRect(140, 30, 171, 20));
+        envoyer = new QPushButton(page_4);
+        envoyer->setObjectName("envoyer");
+        envoyer->setGeometry(QRect(350, 30, 80, 18));
+        retour2 = new QPushButton(page_4);
+        retour2->setObjectName("retour2");
+        retour2->setGeometry(QRect(480, 260, 80, 18));
+        stack->addWidget(page_4);
         pushButton_5 = new QPushButton(widget_3);
         pushButton_5->setObjectName("pushButton_5");
         pushButton_5->setGeometry(QRect(620, 90, 81, 71));
@@ -178,48 +242,40 @@ public:
         QIcon icon2;
         icon2.addFile(QString::fromUtf8("../../../Icons for qt/user-add.png"), QSize(), QIcon::Normal, QIcon::Off);
         switch1->setIcon(icon2);
-        switch2 = new QPushButton(icon_only);
-        switch2->setObjectName("switch2");
-        switch2->setGeometry(QRect(20, 170, 91, 18));
-        QIcon icon3;
-        icon3.addFile(QString::fromUtf8("../../../Icons for qt/trash.png"), QSize(), QIcon::Normal, QIcon::Off);
-        switch2->setIcon(icon3);
-        switch3 = new QPushButton(icon_only);
-        switch3->setObjectName("switch3");
-        switch3->setGeometry(QRect(20, 200, 91, 18));
-        QIcon icon4;
-        icon4.addFile(QString::fromUtf8("../../../Icons for qt/add.png"), QSize(), QIcon::Normal, QIcon::Off);
-        switch3->setIcon(icon4);
         quitter = new QPushButton(icon_only);
         quitter->setObjectName("quitter");
         quitter->setGeometry(QRect(20, 360, 91, 18));
-        QIcon icon5;
-        icon5.addFile(QString::fromUtf8("../../../Icons for qt/exit.png"), QSize(), QIcon::Normal, QIcon::Off);
-        quitter->setIcon(icon5);
+        QIcon icon3;
+        icon3.addFile(QString::fromUtf8("../../../Icons for qt/exit.png"), QSize(), QIcon::Normal, QIcon::Off);
+        quitter->setIcon(icon3);
         tri = new QPushButton(icon_only);
         tri->setObjectName("tri");
-        tri->setGeometry(QRect(20, 230, 91, 18));
-        QIcon icon6;
-        icon6.addFile(QString::fromUtf8("../../../Icons for qt/layers.png"), QSize(), QIcon::Normal, QIcon::Off);
-        tri->setIcon(icon6);
+        tri->setGeometry(QRect(20, 170, 91, 18));
+        QIcon icon4;
+        icon4.addFile(QString::fromUtf8("../../../Icons for qt/layers.png"), QSize(), QIcon::Normal, QIcon::Off);
+        tri->setIcon(icon4);
         menu = new QPushButton(icon_only);
         menu->setObjectName("menu");
         menu->setGeometry(QRect(40, 40, 51, 18));
-        QIcon icon7;
-        icon7.addFile(QString::fromUtf8("../../../Icons for qt/align-justify.png"), QSize(), QIcon::Normal, QIcon::Off);
-        menu->setIcon(icon7);
-        stat = new QPushButton(icon_only);
-        stat->setObjectName("stat");
-        stat->setGeometry(QRect(20, 260, 91, 18));
-        QIcon icon8;
-        icon8.addFile(QString::fromUtf8("../../../Icons for qt/chart-histogram.png"), QSize(), QIcon::Normal, QIcon::Off);
-        stat->setIcon(icon8);
+        QIcon icon5;
+        icon5.addFile(QString::fromUtf8("../../../Icons for qt/align-justify.png"), QSize(), QIcon::Normal, QIcon::Off);
+        menu->setIcon(icon5);
+        bstat = new QPushButton(icon_only);
+        bstat->setObjectName("bstat");
+        bstat->setGeometry(QRect(20, 200, 91, 18));
+        QIcon icon6;
+        icon6.addFile(QString::fromUtf8("../../../Icons for qt/chart-histogram.png"), QSize(), QIcon::Normal, QIcon::Off);
+        bstat->setIcon(icon6);
         profil = new QPushButton(icon_only);
         profil->setObjectName("profil");
         profil->setGeometry(QRect(20, 330, 91, 18));
-        QIcon icon9;
-        icon9.addFile(QString::fromUtf8("../../../Icons for qt/user.png"), QSize(), QIcon::Normal, QIcon::Off);
-        profil->setIcon(icon9);
+        QIcon icon7;
+        icon7.addFile(QString::fromUtf8("../../../Icons for qt/user.png"), QSize(), QIcon::Normal, QIcon::Off);
+        profil->setIcon(icon7);
+        mailing = new QPushButton(icon_only);
+        mailing->setObjectName("mailing");
+        mailing->setGeometry(QRect(20, 230, 91, 18));
+        mailing->setIcon(icon6);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
@@ -231,7 +287,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stack->setCurrentIndex(0);
+        stack->setCurrentIndex(3);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -242,7 +298,15 @@ public:
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         rech->setText(QCoreApplication::translate("MainWindow", "Rechercher", nullptr));
         recherche->setText(QString());
+        combo->setItemText(0, QCoreApplication::translate("MainWindow", "Id", nullptr));
+        combo->setItemText(1, QCoreApplication::translate("MainWindow", "Nom", nullptr));
+        combo->setItemText(2, QCoreApplication::translate("MainWindow", "Pr\303\251nom", nullptr));
+
         refresh->setText(QCoreApplication::translate("MainWindow", "Actualiser", nullptr));
+        pdf->setText(QCoreApplication::translate("MainWindow", "PDF", nullptr));
+        label_8->setText(QCoreApplication::translate("MainWindow", "Id:", nullptr));
+        reduction->setText(QString());
+        calcred->setText(QCoreApplication::translate("MainWindow", "Calculer R\303\251d.", nullptr));
         ajout->setText(QCoreApplication::translate("MainWindow", "Ajouter", nullptr));
         mod->setText(QCoreApplication::translate("MainWindow", "Modier", nullptr));
         supp->setText(QCoreApplication::translate("MainWindow", "Supprimer", nullptr));
@@ -254,15 +318,19 @@ public:
         label_5->setText(QCoreApplication::translate("MainWindow", "type Affaire", nullptr));
         label_6->setText(QCoreApplication::translate("MainWindow", "nbr Affaire", nullptr));
         retour->setText(QCoreApplication::translate("MainWindow", "Retour", nullptr));
+        affgraph->setText(QCoreApplication::translate("MainWindow", "Afficher stat", nullptr));
+        retour1->setText(QCoreApplication::translate("MainWindow", "Retour", nullptr));
+        label_9->setText(QCoreApplication::translate("MainWindow", "E-Mail destinataire:", nullptr));
+        envoyer->setText(QCoreApplication::translate("MainWindow", "Envoyer", nullptr));
+        retour2->setText(QCoreApplication::translate("MainWindow", "Retour", nullptr));
         pushButton_5->setText(QString());
-        switch1->setText(QCoreApplication::translate("MainWindow", "Ajouter Client", nullptr));
-        switch2->setText(QCoreApplication::translate("MainWindow", "Supprimer Client", nullptr));
-        switch3->setText(QCoreApplication::translate("MainWindow", "Modifier Client", nullptr));
+        switch1->setText(QCoreApplication::translate("MainWindow", "G\303\251rer Clients", nullptr));
         quitter->setText(QCoreApplication::translate("MainWindow", "Quitter", nullptr));
         tri->setText(QCoreApplication::translate("MainWindow", "Tri par nbr Affaire", nullptr));
         menu->setText(QCoreApplication::translate("MainWindow", "Menu", nullptr));
-        stat->setText(QCoreApplication::translate("MainWindow", "Statistique", nullptr));
+        bstat->setText(QCoreApplication::translate("MainWindow", "Statistique", nullptr));
         profil->setText(QCoreApplication::translate("MainWindow", "Profil", nullptr));
+        mailing->setText(QCoreApplication::translate("MainWindow", "Mailing", nullptr));
     } // retranslateUi
 
 };

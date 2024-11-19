@@ -81,10 +81,26 @@ QSqlQueryModel* Client::tri()
     return model->query().isActive() ? model: nullptr;
 }
 
-QSqlQueryModel* Client::recherche(int id) {
+QSqlQueryModel* Client::recherche(int id, QString nom, QString prenom, QString combo) {
     QSqlQuery query;
-    query.prepare("SELECT * FROM client WHERE idC = :id");
-    query.bindValue(":id", id);
+
+    if(combo== "Id")
+    {
+        query.prepare("SELECT * FROM client WHERE idC = :id");
+        query.bindValue(":id", id);
+    }
+
+    else if(combo== "Nom")
+    {
+        query.prepare("SELECT * FROM client WHERE nom = :nom");
+        query.bindValue(":nom", nom);
+    }
+
+    else if(combo== "Prénom")
+    {
+        query.prepare("SELECT * FROM client WHERE prénom = :prenom");
+        query.bindValue(":prenom", prenom);
+    }
 
     bool test=query.exec();
 
@@ -97,4 +113,65 @@ QSqlQueryModel* Client::recherche(int id) {
         return nullptr;
     }
 }
+
+bool Client::exporterPDF(const QString &nomFichier, QAbstractItemModel *model) {
+    QPdfWriter pdfWriter(nomFichier);
+    pdfWriter.setPageSize(QPageSize(QPageSize::A4));
+    pdfWriter.setPageMargins(QMargins(30, 30, 30, 30));
+
+    QPainter painter(&pdfWriter);
+    if (!painter.isActive()) {
+        qDebug() << "Erreur lors de l'initialisation du QPainter pour le PDF.";
+        return false;
+    }
+
+    // Set PDF parameters
+    painter.setPen(Qt::black);
+    painter.setFont(QFont("Arial", 20));
+
+    // Title
+    painter.drawText(2500, 1100, "Liste des Clients (ID et Noms)");
+
+    // Table coordinates and cell dimensions
+    int startX = 200;
+    int startY = 1800;
+    int cellWidth = 1100;
+    int cellHeight = 450;
+
+    // Table headers: "ID Employé" and "Nom"
+    QStringList headers = {"ID Client", "Nom"};
+    painter.setFont(QFont("Arial", 10, QFont::Bold));
+    for (int col = 0; col < headers.size(); ++col) {
+        painter.drawText(startX + col * cellWidth, startY, cellWidth, cellHeight, Qt::AlignCenter, headers[col]);
+    }
+
+    // Display data: ID and Name
+    int rowCount = model->rowCount();
+    painter.setFont(QFont("Arial", 10));
+    for (int row = 0; row < rowCount; ++row) {
+        QColor bgColor = (row % 2 == 0) ? Qt::lightGray : Qt::white;
+
+        // Draw ID (column 0) and Name (column 1)
+        QString idData = model->data(model->index(row, 0)).toString();  // Column 0 is "ID"
+        QString nameData = model->data(model->index(row, 1)).toString();  // Column 1 is "Nom"
+
+        // ID cell
+        QRect idCellRect(startX, startY + (row + 1) * cellHeight, cellWidth, cellHeight);
+        painter.fillRect(idCellRect, bgColor);
+        painter.drawText(idCellRect, Qt::AlignCenter, idData);
+        painter.drawRect(idCellRect);
+
+        // Name cell
+        QRect nameCellRect(startX + cellWidth, startY + (row + 1) * cellHeight, cellWidth, cellHeight);
+        painter.fillRect(nameCellRect, bgColor);
+        painter.drawText(nameCellRect, Qt::AlignCenter, nameData);
+        painter.drawRect(nameCellRect);
+    }
+
+    painter.end();
+    QMessageBox::information(nullptr, "PDF Créé", "Un fichier PDF a été créé.");
+    return true;
+}
+
+
 

@@ -38,7 +38,7 @@
      <widget class="QPushButton" name="rech">
       <property name="geometry">
        <rect>
-        <x>400</x>
+        <x>420</x>
         <y>40</y>
         <width>81</width>
         <height>18</height>
@@ -55,7 +55,7 @@
      <widget class="QLineEdit" name="recherche">
       <property name="geometry">
        <rect>
-        <x>220</x>
+        <x>230</x>
         <y>40</y>
         <width>171</width>
         <height>20</height>
@@ -65,6 +65,31 @@
        <string/>
       </property>
      </widget>
+     <widget class="QComboBox" name="combo">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>40</y>
+        <width>81</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Id</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Nom</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Prénom</string>
+       </property>
+      </item>
+     </widget>
     </widget>
     <widget class="QStackedWidget" name="stack">
      <property name="geometry">
@@ -72,11 +97,11 @@
        <x>20</x>
        <y>110</y>
        <width>591</width>
-       <height>281</height>
+       <height>291</height>
       </rect>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>3</number>
      </property>
      <widget class="QWidget" name="page">
       <widget class="QTableView" name="tab">
@@ -85,7 +110,7 @@
          <x>50</x>
          <y>40</y>
          <width>521</width>
-         <height>221</height>
+         <height>181</height>
         </rect>
        </property>
       </widget>
@@ -100,6 +125,68 @@
        </property>
        <property name="text">
         <string>Actualiser</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pdf">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>10</y>
+         <width>80</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>PDF</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="idred">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>240</y>
+         <width>113</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_8">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>240</y>
+         <width>16</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Id:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="reduction">
+       <property name="geometry">
+        <rect>
+         <x>310</x>
+         <y>240</y>
+         <width>141</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="calcred">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>270</y>
+         <width>80</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Calculer Réd.</string>
        </property>
       </widget>
      </widget>
@@ -318,6 +405,95 @@
        </property>
       </widget>
      </widget>
+     <widget class="QWidget" name="page_3">
+      <widget class="QGraphicsView" name="graph">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>561</width>
+         <height>241</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="affgraph">
+       <property name="geometry">
+        <rect>
+         <x>510</x>
+         <y>260</y>
+         <width>80</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Afficher stat</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="retour1">
+       <property name="geometry">
+        <rect>
+         <x>420</x>
+         <y>260</y>
+         <width>80</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Retour</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page_4">
+      <widget class="QLabel" name="label_9">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>30</y>
+         <width>111</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>E-Mail destinataire:</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="mail_3">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>30</y>
+         <width>171</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="envoyer">
+       <property name="geometry">
+        <rect>
+         <x>350</x>
+         <y>30</y>
+         <width>80</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Envoyer</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="retour2">
+       <property name="geometry">
+        <rect>
+         <x>480</x>
+         <y>260</y>
+         <width>80</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Retour</string>
+       </property>
+      </widget>
+     </widget>
     </widget>
     <widget class="QPushButton" name="pushButton_5">
      <property name="geometry">
@@ -365,45 +541,11 @@
       </rect>
      </property>
      <property name="text">
-      <string>Ajouter Client</string>
+      <string>Gérer Clients</string>
      </property>
      <property name="icon">
       <iconset>
        <normaloff>../../../Icons for qt/user-add.png</normaloff>../../../Icons for qt/user-add.png</iconset>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="switch2">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>170</y>
-       <width>91</width>
-       <height>18</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Supprimer Client</string>
-     </property>
-     <property name="icon">
-      <iconset>
-       <normaloff>../../../Icons for qt/trash.png</normaloff>../../../Icons for qt/trash.png</iconset>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="switch3">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>200</y>
-       <width>91</width>
-       <height>18</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Modifier Client</string>
-     </property>
-     <property name="icon">
-      <iconset>
-       <normaloff>../../../Icons for qt/add.png</normaloff>../../../Icons for qt/add.png</iconset>
      </property>
     </widget>
     <widget class="QPushButton" name="quitter">
@@ -427,7 +569,7 @@
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>230</y>
+       <y>170</y>
        <width>91</width>
        <height>18</height>
       </rect>
@@ -457,11 +599,11 @@
        <normaloff>../../../Icons for qt/align-justify.png</normaloff>../../../Icons for qt/align-justify.png</iconset>
      </property>
     </widget>
-    <widget class="QPushButton" name="stat">
+    <widget class="QPushButton" name="bstat">
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>260</y>
+       <y>200</y>
        <width>91</width>
        <height>18</height>
       </rect>
@@ -489,6 +631,23 @@
      <property name="icon">
       <iconset>
        <normaloff>../../../Icons for qt/user.png</normaloff>../../../Icons for qt/user.png</iconset>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="mailing">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>230</y>
+       <width>91</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Mailing</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../../Icons for qt/chart-histogram.png</normaloff>../../../Icons for qt/chart-histogram.png</iconset>
      </property>
     </widget>
    </widget>

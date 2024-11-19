@@ -27,8 +27,14 @@ private slots:
     void afficher();
     void tri();
     void recherche();
+    void expPDF();
+    //void sendEmail();
+    void stat();
+    void PtMrc();
     void page1Wid();
     void page2Wid();
+    void page3Wid();
+    void page4Wid();
 
 private:
     Ui::MainWindow *ui;
