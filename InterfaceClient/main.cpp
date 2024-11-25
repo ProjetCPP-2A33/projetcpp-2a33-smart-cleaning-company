@@ -1,4 +1,4 @@
-#include "mainwindow.h"
+#include "clientwindow.h"
 #include <QApplication>
 #include "connection.h"
 int main(int argc, char *argv[])
