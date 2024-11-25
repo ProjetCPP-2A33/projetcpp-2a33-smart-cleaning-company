@@ -2,7 +2,7 @@
 #define CLIENTWINDOW_H
 
 #include <QMainWindow>
-#include <client.h>
+#include "ArduinoClient.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -30,15 +30,18 @@ private slots:
     void expPDF();
     void sendEmail();
     void stat();
-    void PtMrc();
+    void PtMrc(); //to fix
+    void verifId();
     void page1Wid();
     void page2Wid();
     void page3Wid();
     void page4Wid();
+    void page5Wid();
 
 private:
     Ui::MainWindow *ui;
     Client client;
+    SerialCommunication *arduino;
 
     void setupConnections();
 };

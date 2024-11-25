@@ -30,6 +30,9 @@
 
 #include <QRegularExpression>
 
+#include <QSerialPort>
+#include <QSerialPortInfo>
+
 
 using namespace std;
 
@@ -73,6 +76,7 @@ public:
     QSqlQueryModel * tri();
     QSqlQueryModel * recherche(int, QString,QString,QString);
     bool exporterPDF(const QString &nomFichier, QAbstractItemModel *model);
+    bool checkID(int id);
 
 };
 

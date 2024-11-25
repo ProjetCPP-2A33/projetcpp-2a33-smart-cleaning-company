@@ -1,6 +1,7 @@
 #include "clientwindow.h"
 #include <QApplication>
 #include "connection.h"
+#include <ArduinoClient.h>
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
@@ -15,10 +16,22 @@ int main(int argc, char *argv[])
                                              "Click Cancel to exit."), QMessageBox::Cancel);
 
     }
-    else
+    else{
         QMessageBox::critical(nullptr, QObject::tr("database is not open"),
                               QObject::tr("connection failed.\n"
                                           "Click Cancel to exit."), QMessageBox::Cancel);
+    }
+
+    /*SerialCommunication serialComm;
+    serialComm.setupSerial("COM7", 9600);  // Replace with your port
+
+    QObject::connect(&serialComm, &SerialCommunication::dataReceived,
+                     [](const QString &data){
+                         qDebug() << "Received from Arduino:" << data;
+                     });
+
+    // Send data example
+    serialComm.sendData("Hello Arduino!");*/
 
 
 

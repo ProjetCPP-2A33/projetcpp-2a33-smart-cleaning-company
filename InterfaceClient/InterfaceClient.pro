@@ -6,6 +6,9 @@
 
 QT += network
 
+QT += serialport
+
+
 QT       += core gui sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -27,12 +30,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+    ArduinoClient.cpp \
     client.cpp \
     clientwindow.cpp \
         main.cpp \
     connection.cpp
 
 HEADERS += \
+    ArduinoClient.h \
     client.h \
     clientwindow.h \
     connection.h

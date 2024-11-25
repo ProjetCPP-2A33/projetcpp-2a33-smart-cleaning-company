@@ -173,5 +173,16 @@ bool Client::exporterPDF(const QString &nomFichier, QAbstractItemModel *model) {
     return true;
 }
 
+bool Client::checkID(int id) {
+    QSqlQuery query;
+    query.prepare("SELECT COUNT(*) FROM client WHERE idC = :id");
+    query.bindValue(":id", id);
 
+    if (query.exec()) {
+        if (query.next()) {
+            return query.value(0).toInt() > 0;  // If count > 0, ID exists
+        }
+    }
+    return false;
+}
 

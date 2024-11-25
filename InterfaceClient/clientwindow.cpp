@@ -1,17 +1,22 @@
 #include "clientwindow.h"
 #include "ui_clientwindow.h"
 #include "client.h"
+#include "ArduinoClient.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
-
+    , arduino(new SerialCommunication(this))  // Initialize the SerialCommunication object
 {
     ui->setupUi(this);
     ui->tab->setModel(client.afficher());
 
+    // Set up serial communication
+    arduino->setupSerial("COM7", 9600);  // Replace "COM3" with your actual COM port name
+
     setupConnections();
 }
+
 
 void MainWindow::page1Wid()
 {
@@ -33,6 +38,11 @@ void MainWindow::page4Wid()
     ui->stack->setCurrentWidget(ui->page_4);
 }
 
+void MainWindow::page5Wid()
+{
+    ui->stack->setCurrentWidget(ui->page_5);
+}
+
 MainWindow::~MainWindow()
 {
     delete ui;
@@ -46,6 +56,7 @@ void MainWindow::setupConnections()
     connect(ui->retour2, &QPushButton::clicked, this, &MainWindow::page1Wid);
     connect(ui->bstat, &QPushButton::clicked, this, &MainWindow::page3Wid);
     connect(ui->mailing, &QPushButton::clicked, this, &MainWindow::page4Wid);
+    connect(ui->tempb, &QPushButton::clicked, this, &MainWindow::page5Wid);
 
     connect(ui->ajout, &QPushButton::clicked, this, &MainWindow::ajouterClient);
     connect(ui->supp, &QPushButton::clicked, this, &MainWindow::supprimerClient);
@@ -57,6 +68,7 @@ void MainWindow::setupConnections()
     connect(ui->affgraph, &QPushButton::clicked, this, &MainWindow::stat);
     connect(ui->calcred, &QPushButton::clicked, this, &MainWindow::PtMrc);
     connect(ui->envoyer, &QPushButton::clicked, this, &MainWindow::sendEmail);
+    connect(ui->temprech, &QPushButton::clicked, this, &MainWindow::verifId);
 
 }
 
@@ -512,4 +524,28 @@ void MainWindow::sendEmail() {
         reply->deleteLater();
     });
 }
+
+void MainWindow::verifId() {
+    int id = ui->temp->text().toInt();  // Get ID from QLineEdit
+    qDebug() << "Checking ID:" << id;
+
+    // Check if ID exists in the database
+    if (client.checkID(id)) {
+        qDebug() << "ID found in database";
+        if (arduino) {
+            arduino->BuzzSignal(1);  // One ring
+        } else {
+            qDebug() << "Arduino object is not initialized!";
+        }
+    } else {
+        qDebug() << "ID not found in database";
+        if (arduino) {
+            arduino->BuzzSignal(2);  // Two rings
+        } else {
+            qDebug() << "Arduino object is not initialized!";
+        }
+    }
+}
+
+
 
