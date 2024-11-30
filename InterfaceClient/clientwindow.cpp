@@ -12,35 +12,50 @@ MainWindow::MainWindow(QWidget *parent)
     ui->tab->setModel(client.afficher());
 
     // Set up serial communication
-    arduino->setupSerial("COM7", 9600);  // Replace "COM3" with your actual COM port name
+    arduino->setupSerial("COM9", 9600);  // Replace "COM3" with your actual COM port name
 
     setupConnections();
+}
+
+void MainWindow::page1Main()
+{
+    ui->mainstack->setCurrentWidget(ui->menu);
+}
+
+void MainWindow::page2Main()
+{
+    ui->mainstack->setCurrentWidget(ui->client);
+}
+
+void MainWindow::page3Main()
+{
+    ui->mainstack->setCurrentWidget(ui->produits);
 }
 
 
 void MainWindow::page1Wid()
 {
-    ui->stack->setCurrentWidget(ui->page);
+    ui->stack->setCurrentWidget(ui->afficher);
 }
 
 void MainWindow::page2Wid()
 {
-    ui->stack->setCurrentWidget(ui->page_2);
+    ui->stack->setCurrentWidget(ui->gerer);
 }
 
 void MainWindow::page3Wid()
 {
-    ui->stack->setCurrentWidget(ui->page_3);
+    ui->stack->setCurrentWidget(ui->stat);
 }
 
 void MainWindow::page4Wid()
 {
-    ui->stack->setCurrentWidget(ui->page_4);
+    ui->stack->setCurrentWidget(ui->mail);
 }
 
 void MainWindow::page5Wid()
 {
-    ui->stack->setCurrentWidget(ui->page_5);
+    ui->stack->setCurrentWidget(ui->temp);
 }
 
 MainWindow::~MainWindow()
@@ -57,6 +72,11 @@ void MainWindow::setupConnections()
     connect(ui->bstat, &QPushButton::clicked, this, &MainWindow::page3Wid);
     connect(ui->mailing, &QPushButton::clicked, this, &MainWindow::page4Wid);
     connect(ui->tempb, &QPushButton::clicked, this, &MainWindow::page5Wid);
+
+    connect(ui->clientB, &QPushButton::clicked, this, &MainWindow::page2Main);
+    connect(ui->produitsB, &QPushButton::clicked, this, &MainWindow::page3Main);
+    //connect(ui->machinesB, &QPushButton::clicked, this, &MainWindow::page3Main);
+    connect(ui->quitter, &QPushButton::clicked, this, &MainWindow::page1Main);
 
     connect(ui->ajout, &QPushButton::clicked, this, &MainWindow::ajouterClient);
     connect(ui->supp, &QPushButton::clicked, this, &MainWindow::supprimerClient);
@@ -526,7 +546,7 @@ void MainWindow::sendEmail() {
 }
 
 void MainWindow::verifId() {
-    int id = ui->temp->text().toInt();  // Get ID from QLineEdit
+    int id = ui->temp1->text().toInt();  // Get ID from QLineEdit
     qDebug() << "Checking ID:" << id;
 
     // Check if ID exists in the database

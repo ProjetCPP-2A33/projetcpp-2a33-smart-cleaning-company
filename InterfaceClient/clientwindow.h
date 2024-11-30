@@ -32,6 +32,11 @@ private slots:
     void stat();
     void PtMrc(); //to fix
     void verifId();
+
+    void page1Main();
+    void page2Main();
+    void page3Main();
+
     void page1Wid();
     void page2Wid();
     void page3Wid();

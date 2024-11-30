@@ -57,6 +57,9 @@ constexpr auto qt_meta_stringdata_CLASSMainWindowENDCLASS = QtMocHelpers::string
     "stat",
     "PtMrc",
     "verifId",
+    "page1Main",
+    "page2Main",
+    "page3Main",
     "page1Wid",
     "page2Wid",
     "page3Wid",
@@ -65,7 +68,7 @@ constexpr auto qt_meta_stringdata_CLASSMainWindowENDCLASS = QtMocHelpers::string
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSMainWindowENDCLASS_t {
-    uint offsetsAndSizes[48];
+    uint offsetsAndSizes[54];
     char stringdata0[11];
     char stringdata1[14];
     char stringdata2[1];
@@ -85,11 +88,14 @@ struct qt_meta_stringdata_CLASSMainWindowENDCLASS_t {
     char stringdata16[5];
     char stringdata17[6];
     char stringdata18[8];
-    char stringdata19[9];
-    char stringdata20[9];
-    char stringdata21[9];
+    char stringdata19[10];
+    char stringdata20[10];
+    char stringdata21[10];
     char stringdata22[9];
     char stringdata23[9];
+    char stringdata24[9];
+    char stringdata25[9];
+    char stringdata26[9];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSMainWindowENDCLASS_t::offsetsAndSizes) + ofs), len 
@@ -114,11 +120,14 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSMainWindowENDCLASS_t qt_meta_st
         QT_MOC_LITERAL(132, 4),  // "stat"
         QT_MOC_LITERAL(137, 5),  // "PtMrc"
         QT_MOC_LITERAL(143, 7),  // "verifId"
-        QT_MOC_LITERAL(151, 8),  // "page1Wid"
-        QT_MOC_LITERAL(160, 8),  // "page2Wid"
-        QT_MOC_LITERAL(169, 8),  // "page3Wid"
-        QT_MOC_LITERAL(178, 8),  // "page4Wid"
-        QT_MOC_LITERAL(187, 8)   // "page5Wid"
+        QT_MOC_LITERAL(151, 9),  // "page1Main"
+        QT_MOC_LITERAL(161, 9),  // "page2Main"
+        QT_MOC_LITERAL(171, 9),  // "page3Main"
+        QT_MOC_LITERAL(181, 8),  // "page1Wid"
+        QT_MOC_LITERAL(190, 8),  // "page2Wid"
+        QT_MOC_LITERAL(199, 8),  // "page3Wid"
+        QT_MOC_LITERAL(208, 8),  // "page4Wid"
+        QT_MOC_LITERAL(217, 8)   // "page5Wid"
     },
     "MainWindow",
     "ajouterClient",
@@ -139,6 +148,9 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSMainWindowENDCLASS_t qt_meta_st
     "stat",
     "PtMrc",
     "verifId",
+    "page1Main",
+    "page2Main",
+    "page3Main",
     "page1Wid",
     "page2Wid",
     "page3Wid",
@@ -155,7 +167,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-      18,   14, // methods
+      21,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -163,24 +175,27 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,  122,    2, 0x08,    1 /* Private */,
-       3,    0,  123,    2, 0x08,    2 /* Private */,
-       4,    4,  124,    2, 0x08,    3 /* Private */,
-       9,    0,  133,    2, 0x08,    8 /* Private */,
-      10,    4,  134,    2, 0x08,    9 /* Private */,
-      11,    0,  143,    2, 0x08,   14 /* Private */,
-      12,    0,  144,    2, 0x08,   15 /* Private */,
-      13,    0,  145,    2, 0x08,   16 /* Private */,
-      14,    0,  146,    2, 0x08,   17 /* Private */,
-      15,    0,  147,    2, 0x08,   18 /* Private */,
-      16,    0,  148,    2, 0x08,   19 /* Private */,
-      17,    0,  149,    2, 0x08,   20 /* Private */,
-      18,    0,  150,    2, 0x08,   21 /* Private */,
-      19,    0,  151,    2, 0x08,   22 /* Private */,
-      20,    0,  152,    2, 0x08,   23 /* Private */,
-      21,    0,  153,    2, 0x08,   24 /* Private */,
-      22,    0,  154,    2, 0x08,   25 /* Private */,
-      23,    0,  155,    2, 0x08,   26 /* Private */,
+       1,    0,  140,    2, 0x08,    1 /* Private */,
+       3,    0,  141,    2, 0x08,    2 /* Private */,
+       4,    4,  142,    2, 0x08,    3 /* Private */,
+       9,    0,  151,    2, 0x08,    8 /* Private */,
+      10,    4,  152,    2, 0x08,    9 /* Private */,
+      11,    0,  161,    2, 0x08,   14 /* Private */,
+      12,    0,  162,    2, 0x08,   15 /* Private */,
+      13,    0,  163,    2, 0x08,   16 /* Private */,
+      14,    0,  164,    2, 0x08,   17 /* Private */,
+      15,    0,  165,    2, 0x08,   18 /* Private */,
+      16,    0,  166,    2, 0x08,   19 /* Private */,
+      17,    0,  167,    2, 0x08,   20 /* Private */,
+      18,    0,  168,    2, 0x08,   21 /* Private */,
+      19,    0,  169,    2, 0x08,   22 /* Private */,
+      20,    0,  170,    2, 0x08,   23 /* Private */,
+      21,    0,  171,    2, 0x08,   24 /* Private */,
+      22,    0,  172,    2, 0x08,   25 /* Private */,
+      23,    0,  173,    2, 0x08,   26 /* Private */,
+      24,    0,  174,    2, 0x08,   27 /* Private */,
+      25,    0,  175,    2, 0x08,   28 /* Private */,
+      26,    0,  176,    2, 0x08,   29 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -188,6 +203,9 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
     QMetaType::Bool, QMetaType::Int, QMetaType::Int, QMetaType::QString, QMetaType::Int,    5,    6,    7,    8,
     QMetaType::Void,
     QMetaType::Bool, QMetaType::Int, QMetaType::Int, QMetaType::QString, QMetaType::Int,    5,    6,    7,    8,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -248,6 +266,12 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'verifId'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'page1Main'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'page2Main'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'page3Main'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'page1Wid'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'page2Wid'
@@ -283,11 +307,14 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 10: _t->stat(); break;
         case 11: _t->PtMrc(); break;
         case 12: _t->verifId(); break;
-        case 13: _t->page1Wid(); break;
-        case 14: _t->page2Wid(); break;
-        case 15: _t->page3Wid(); break;
-        case 16: _t->page4Wid(); break;
-        case 17: _t->page5Wid(); break;
+        case 13: _t->page1Main(); break;
+        case 14: _t->page2Main(); break;
+        case 15: _t->page3Main(); break;
+        case 16: _t->page1Wid(); break;
+        case 17: _t->page2Wid(); break;
+        case 18: _t->page3Wid(); break;
+        case 19: _t->page4Wid(); break;
+        case 20: _t->page5Wid(); break;
         default: ;
         }
     }
@@ -312,13 +339,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 18)
+        if (_id < 21)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 18;
+        _id -= 21;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 18)
+        if (_id < 21)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 18;
+        _id -= 21;
     }
     return _id;
 }
