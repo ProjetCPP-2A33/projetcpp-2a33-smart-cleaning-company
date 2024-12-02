@@ -20,18 +20,32 @@
 #include <QFileDialog>
 #include <QMessageBox>
 
+
+
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
+    , ui(new Ui::MainWindow),
+    serial(new QSerialPort(this))
 {
     ui->setupUi(this);
+    ///
+    // Initialize serial port
+
+    connect(serial, &QSerialPort::readyRead, this, &MainWindow::readSerialData);
+    openSerialPort();
+    ///
     afficherMachines();  // Display existing machines when the app starts
 
+
+
     // Connect the Tri par ID button to the sorting function
+
     connect(ui->pb_tri, &QPushButton::clicked, this, &MainWindow::on_pb_tri_clicked);
     connect(ui->pb_search, &QPushButton::clicked, this, &MainWindow::on_pb_search_clicked);
     connect(ui->pb_stat, &QPushButton::clicked, this, &MainWindow::on_pb_stat_clicked);
 
+    // Theme setup (Dark/Light)
     darkPalette.setColor(QPalette::Window, QColor(30, 30, 30));            // Dark background
     darkPalette.setColor(QPalette::WindowText, Qt::black);                // Text color: white
     darkPalette.setColor(QPalette::Base, QColor(45, 45, 45));             // Base color (input fields, etc.)
@@ -45,8 +59,6 @@ MainWindow::MainWindow(QWidget *parent)
     darkPalette.setColor(QPalette::HighlightedText, Qt::black);           // Highlighted text color
     darkPalette.setColor(QPalette::Text, QColor(255, 255, 255));
 
-
-
     // Light Mode Palette Setup
     lightPalette.setColor(QPalette::Window, QColor(255, 255, 255));
     lightPalette.setColor(QPalette::WindowText, Qt::black);
@@ -58,15 +70,14 @@ MainWindow::MainWindow(QWidget *parent)
     lightPalette.setColor(QPalette::Button, QColor(200, 200, 200));
     lightPalette.setColor(QPalette::ButtonText, Qt::black);
 
-
     // Initially set dark theme
     QApplication::setPalette(darkPalette);
-
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+    delete serial;
 }
 
 void MainWindow::afficherMachines() {
@@ -75,7 +86,8 @@ void MainWindow::afficherMachines() {
     ui->tab_aff->setModel(model);  // Set the model to display machines in tab_aff
 }
 
-void MainWindow::on_pb_ajouter_clicked() {
+void MainWindow::on_pb_ajouter_clicked()
+{
     int id_M = ui->le_id_M->text().toInt();
     QString etatM = ui->le_etatM->text();
     int responsableM = ui->le_responsableM->text().toInt();  // Convert this field to int
@@ -399,4 +411,79 @@ void MainWindow::on_toggleThemeButton_clicked()
         QApplication::setPalette(darkPalette);
         isDarkMode = true;
     }
+}
+
+//////////////////////////////ARDUINOOOOOOOOO///////////////////////////////////////////////
+
+
+void MainWindow::openSerialPort()
+{
+    serial->setPortName("COM4"); // Replace with the correct port for your system
+    serial->setBaudRate(QSerialPort::Baud9600);
+    serial->setDataBits(QSerialPort::Data8);
+    serial->setParity(QSerialPort::NoParity);
+    serial->setStopBits(QSerialPort::OneStop);
+    serial->setFlowControl(QSerialPort::NoFlowControl);
+
+    if (serial->open(QIODevice::ReadOnly)) {
+        qDebug() << "Serial port opened successfully!";
+        ui->there->setText("Serial port opened. Swipe your RFID card or tag.");
+    } else {
+        qDebug() << "Failed to open serial port:" << serial->errorString();
+        ui->there->setText("Failed to open serial port!");
+    }
+
+    connect(serial, &QSerialPort::readyRead, this, &MainWindow::readSerialData); // Connect serial data ready signal
+}
+
+void MainWindow::readSerialData()
+{
+    static QByteArray buffer; // Buffer to store incomplete serial data
+    buffer.append(serial->readAll());
+
+    // Check if a complete RFID tag is received (ends with a newline in the Arduino code)
+    if (buffer.contains('\n')) {
+        QString rawData = QString(buffer).trimmed();
+        buffer.clear(); // Clear the buffer after processing
+
+        qDebug() << "Raw Data Received:" << rawData;
+
+        // Extract UID from the raw data (e.g., "UID tag : 13 B1 6A A9")
+        if (rawData.startsWith("UID tag :")) {
+            QString rfidID = rawData.mid(10).remove(" ").toLower(); // Normalize UID
+            qDebug() << "Formatted RFID ID:" << rfidID;
+
+            // Check if the RFID ID exists in the database
+            if (checkIfRFIDExists(rfidID)) {
+                ui->there->setText("Access Granted: RFID exists in the database.");
+                qDebug() << "RFID exists in the database!";
+            } else {
+                ui->there->setText("Access Denied: RFID does not exist in the database.");
+                qDebug() << "RFID does NOT exist in the database!";
+            }
+        } else {
+            qDebug() << "Unexpected serial data format: " << rawData;
+            ui->there->setText("Error: Invalid data received.");
+        }
+    }
+}
+
+bool MainWindow::checkIfRFIDExists(const QString &rfidID)
+{
+    QSqlQuery query;
+
+    // Query to check if the specific RFID tag exists
+    query.prepare("SELECT COUNT(*) FROM employe WHERE rfidc =:rfidc");
+    query.bindValue(":rfidc", rfidID.toLower()); // Normalize the tag
+
+    if (query.exec()) {
+        if (query.next() && query.value(0).toInt() > 0) {
+            return true; // RFID exists in the database
+        }
+    } else {
+        qDebug() << "Database query failed:" << query.lastError().text();
+        ui->there->setText("Error: Database query failed.");
+    }
+
+    return false; // RFID does not exist
 }
