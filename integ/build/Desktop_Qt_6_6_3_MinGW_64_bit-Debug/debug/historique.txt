@@ -1,0 +1,126 @@
+2024-11-18 22:42:55 - Action: Recherche - Produit: c - Nom Recherchéc
+2024-11-18 22:52:44 - Action: Affichage - Produit: PRODUITS - Lister PRODUITS
+2024-11-18 22:52:49 - Action: Affichage - Produit: PRODUITS - Lister PRODUITS
+2024-11-18 22:53:00 - Action: Modification Produit - Produit: b - produit modifié 
+2024-11-18 22:53:02 - Action: Affichage - Produit: PRODUITS - Lister PRODUITS
+2024-11-18 22:53:29 - Action: Ajout Produit - Produit: produit2 - produit ajouté 
+2024-11-19 00:10:58 - Action: Affichage - Produit: PRODUITS - Lister PRODUITS
+2024-11-19 00:11:30 - Action: Affichage - Produit: PRODUITS - Lister PRODUITS
+2024-11-19 00:12:43 - Action: Validation SMS  - Produit: ahla - Validation SMS  24264948
+2024-11-19 00:13:02 - Action: Affichage - Produit: PRODUITS - Lister PRODUITS
+2024-11-19 00:42:57 - Action: Affichage - Produit: PRODUITS - Lister PRODUITS
+2024-11-19 09:26:50 - Action: Affichage - Produit: PRODUITS - Lister PRODUITS
+2024-11-19 09:27:11 - Action: Ajout Produit - Produit: f - produit ajouté 
+2024-11-19 09:27:19 - Action: Affichage - Produit: PRODUITS - Lister PRODUITS
+2024-11-19 09:39:58 - Action: Affichage - Produit: PRODUITS - Lister PRODUITS
+2024-11-19 09:42:05 - Action: Affichage - Produit: PRODUITS - Lister PRODUITS
+2024-11-19 09:42:41 - Action: Affichage - Produit: PRODUITS - Lister PRODUITS
+2024-11-19 11:18:01 - Action: Affichage - Produit: PRODUITS - Lister PRODUITS
+2024-11-19 11:18:42 - Action: Recherche - Produit: f - Nom Recherchéf
+2024-11-19 11:18:51 - Action: Affichage - Produit: PRODUITS - Lister PRODUITS
+2024-11-19 11:19:02 - Action: Affichage - Produit: PRODUITS - Lister PRODUITS
+2024-11-19 11:19:10 - Action: Affichage - Produit: PRODUITS - Lister PRODUITS
+2024-11-19 11:19:18 - Action: Suppression - Produit:  - ppression
+2024-11-19 11:19:19 - Action: Affichage - Produit: PRODUITS - Lister PRODUITS
+2024-11-19 11:19:25 - Action: Affichage - Produit: PRODUITS - Lister PRODUITS
+2024-11-19 11:19:53 - Action: Affichage - Produit: PRODUITS - Lister PRODUITS
+2024-11-19 11:20:04 - Action: Export PDF - Produit: C:/Users/Fradj DOUIRI/Documents/qtfraj/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/gg.pdf - Fichier exportéC:/Users/Fradj DOUIRI/Documents/qtfraj/build/Desktop_Qt_6_6_3_MinGW_64_bit-Debug/gg.pdf
+2024-11-19 11:20:18 - Action: Export PDF - Produit: C:/Users/Fradj DOUIRI/Desktop/validation.pdf - Fichier exportéC:/Users/Fradj DOUIRI/Desktop/validation.pdf
+2024-11-19 11:21:08 - Action: Validation SMS  - Produit: hh - Validation SMS  58321015
+2024-11-19 11:21:31 - Action: Validation SMS  - Produit: ahla - Validation SMS  58321015
+2024-11-23 15:14:13 - Action: Affichage - Produit: PRODUITS - Lister PRODUITS
+2024-11-26 11:22:04 - Action: Affichage - Produit: PRODUITS - Lister PRODUITS
+2024-11-26 11:22:11 - Action: Recherche - Produit: f - Nom Recherchéf
+2024-11-26 11:36:38 - Action: Affichage - Produit: PRODUITS - Lister PRODUITS
+2024-11-26 11:36:43 - Action: Recherche - Produit: f - Nom Recherchéf
+2024-11-26 11:36:46 - Action: Recherche - Produit: f - Nom Recherchéf
+2024-11-26 11:36:46 - Action: Recherche - Produit: f - Nom Recherchéf
+2024-11-26 11:36:47 - Action: Recherche - Produit: f - Nom Recherchéf
+2024-11-26 11:36:47 - Action: Recherche - Produit: f - Nom Recherchéf
+2024-11-26 11:36:47 - Action: Recherche - Produit: f - Nom Recherchéf
+2024-11-26 11:36:47 - Action: Recherche - Produit: f - Nom Recherchéf
+2024-11-27 12:49:32 - Action: Affichage - Produit: PRODUITS - Lister PRODUITS
+2024-11-27 13:00:14 - Action: Affichage - Produit: PRODUITS - Lister PRODUITS
+2024-11-27 13:00:16 - Action: Recherche - Produit:  - Nom Recherché
+2024-11-27 13:00:21 - Action: Recherche - Produit: f - Nom Recherchéf
+2024-11-27 13:00:34 - Action: Recherche - Produit: ggg - Nom Recherchéggg
+2024-11-27 13:00:38 - Action: Recherche - Produit: ggg - Nom Recherchéggg
+2024-11-27 13:00:39 - Action: Recherche - Produit: ggg - Nom Recherchéggg
+2024-11-27 13:00:39 - Action: Recherche - Produit: ggg - Nom Recherchéggg
+2024-11-27 13:00:39 - Action: Recherche - Produit: ggg - Nom Recherchéggg
+2024-11-27 13:00:39 - Action: Recherche - Produit: ggg - Nom Recherchéggg
+2024-11-27 13:00:39 - Action: Recherche - Produit: ggg - Nom Recherchéggg
+2024-11-27 13:00:40 - Action: Recherche - Produit: ggg - Nom Recherchéggg
+2024-11-27 13:00:40 - Action: Recherche - Produit: ggg - Nom Recherchéggg
+2024-11-27 13:00:45 - Action: Recherche - Produit: ggggg - Nom Recherchéggggg
+2024-11-27 13:00:46 - Action: Recherche - Produit: ggggg - Nom Recherchéggggg
+2024-11-27 13:00:46 - Action: Recherche - Produit: ggggg - Nom Recherchéggggg
+2024-11-27 13:02:59 - Action: Affichage - Produit: PRODUITS - Lister PRODUITS
+2024-11-27 13:03:10 - Action: Recherche - Produit: produit2 - Nom Recherchéproduit2
+2024-11-27 13:03:12 - Action: Recherche - Produit: produit2 - Nom Recherchéproduit2
+2024-11-27 13:03:12 - Action: Recherche - Produit: produit2 - Nom Recherchéproduit2
+2024-11-27 13:03:14 - Action: Recherche - Produit: produit2 - Nom Recherchéproduit2
+2024-11-27 13:03:14 - Action: Recherche - Produit: produit2 - Nom Recherchéproduit2
+2024-11-27 13:04:28 - Action: Affichage - Produit: PRODUITS - Lister PRODUITS
+2024-11-27 13:04:33 - Action: Recherche - Produit: hghg - Nom Recherchéhghg
+2024-11-27 13:04:35 - Action: Recherche - Produit: hghg - Nom Recherchéhghg
+2024-11-27 13:04:36 - Action: Recherche - Produit: hghg - Nom Recherchéhghg
+2024-11-27 13:04:36 - Action: Recherche - Produit: hghg - Nom Recherchéhghg
+2024-11-27 13:04:37 - Action: Recherche - Produit: hghg - Nom Recherchéhghg
+2024-11-27 13:04:37 - Action: Recherche - Produit: hghg - Nom Recherchéhghg
+2024-11-27 13:04:37 - Action: Recherche - Produit: hghg - Nom Recherchéhghg
+2024-11-27 13:04:37 - Action: Recherche - Produit: hghg - Nom Recherchéhghg
+2024-11-27 13:04:38 - Action: Recherche - Produit: hghg - Nom Recherchéhghg
+2024-11-27 13:04:38 - Action: Recherche - Produit: hghg - Nom Recherchéhghg
+2024-11-27 13:04:42 - Action: Recherche - Produit: hghg - Nom Recherchéhghg
+2024-11-27 13:05:52 - Action: Affichage - Produit: PRODUITS - Lister PRODUITS
+2024-11-27 13:05:56 - Action: Recherche - Produit: yfutdtu - Nom Recherchéyfutdtu
+2024-11-27 13:05:58 - Action: Recherche - Produit: yfutdtu - Nom Recherchéyfutdtu
+2024-11-27 13:05:58 - Action: Recherche - Produit: yfutdtu - Nom Recherchéyfutdtu
+2024-11-27 13:05:58 - Action: Recherche - Produit: yfutdtu - Nom Recherchéyfutdtu
+2024-11-27 13:06:02 - Action: Recherche - Produit: yfutdtu - Nom Recherchéyfutdtu
+2024-11-27 13:19:11 - Action: Affichage - Produit: PRODUITS - Lister PRODUITS
+2024-11-27 13:19:16 - Action: Recherche - Produit: uygyt - Nom Recherchéuygyt
+2024-11-27 13:19:18 - Action: Recherche - Produit: uygyt - Nom Recherchéuygyt
+2024-11-27 13:19:19 - Action: Recherche - Produit: uygyt - Nom Recherchéuygyt
+2024-11-27 13:19:23 - Action: Recherche - Produit: f - Nom Recherchéf
+2024-11-27 13:19:25 - Action: Recherche - Produit: f - Nom Recherchéf
+2024-11-27 13:19:26 - Action: Recherche - Produit: f - Nom Recherchéf
+2024-11-27 13:20:38 - Action: Recherche - Produit: f - Nom Recherchéf
+2024-11-27 13:22:39 - Action: Affichage - Produit: PRODUITS - Lister PRODUITS
+2024-11-27 13:22:47 - Action: Recherche - Produit: b - Nom Recherchéb
+2024-11-27 13:22:48 - Action: Recherche - Produit: b - Nom Recherchéb
+2024-11-27 13:22:49 - Action: Recherche - Produit: b - Nom Recherchéb
+2024-11-27 13:36:16 - Action: Affichage - Produit: PRODUITS - Lister PRODUITS
+2024-11-27 13:36:20 - Action: Recherche - Produit: f - Nom Recherchéf
+2024-11-27 13:36:21 - Action: Recherche - Produit: f - Nom Recherchéf
+2024-11-27 13:36:21 - Action: Recherche - Produit: f - Nom Recherchéf
+2024-11-27 13:36:22 - Action: Recherche - Produit: f - Nom Recherchéf
+2024-11-28 19:33:10 - Action: Affichage - Produit: PRODUITS - Lister PRODUITS
+2024-11-28 19:34:13 - Action: Affichage - Produit: PRODUITS - Lister PRODUITS
+2024-11-28 19:36:24 - Action: Modification Produit - Produit: f - produit modifié 
+2024-11-28 22:13:35 - Action: Affichage - Produit: PRODUITS - Lister PRODUITS
+2024-11-28 22:15:10 - Action: Validation SMS  - Produit: ahla - Validation SMS  58321015
+2024-11-30 15:34:33 - Action: Affichage - Produit: PRODUITS - Lister PRODUITS
+2024-11-30 15:35:03 - Action: Affichage - Produit: PRODUITS - Lister PRODUITS
+2024-12-01 18:26:45 - Action: Affichage - Produit: PRODUITS - Lister PRODUITS
+2024-12-01 18:26:52 - Action: Recherche - Produit: f - Nom Recherchéf
+2024-12-01 23:42:28 - Action: Affichage - Produit: PRODUITS - Lister PRODUITS
+2024-12-01 23:42:39 - Action: Recherche - Produit:  - Nom Recherché
+2024-12-01 23:42:44 - Action: Recherche - Produit: f - Nom Recherchéf
+2024-12-01 23:42:50 - Action: Recherche - Produit:  - Nom Recherché
+2024-12-01 23:43:41 - Action: Affichage - Produit: PRODUITS - Lister PRODUITS
+2024-12-01 23:44:00 - Action: Modification Produit - Produit: je - produit modifié 
+2024-12-01 23:44:46 - Action: Affichage - Produit: PRODUITS - Lister PRODUITS
+2024-12-02 17:35:47 - Action: Affichage - Produit: PRODUITS - Lister PRODUITS
+2024-12-02 17:35:56 - Action: Recherche - Produit: f - Nom Recherchéf
+2024-12-02 17:36:00 - Action: Recherche - Produit:  - Nom Recherché
+2024-12-02 17:36:06 - Action: Recherche - Produit: je - Nom Recherchéje
+2024-12-02 17:36:27 - Action: Ajout Produit - Produit: fre - produit ajouté 
+2024-12-05 20:50:27 - Action: Affichage - Produit: PRODUITS - Lister PRODUITS
+2024-12-05 20:50:40 - Action: Ajout Produit - Produit: gyu - produit ajouté 
+2024-12-05 20:50:46 - Action: Affichage - Produit: PRODUITS - Lister PRODUITS
+2024-12-05 20:51:01 - Action: Modification Produit - Produit: je - produit modifié 
+2024-12-06 13:52:34 - Action: Affichage - Produit: PRODUITS - Lister PRODUITS
+2024-12-06 13:52:47 - Action: Modification Produit - Produit: je - produit modifié 
+2024-12-06 13:52:53 - Action: Affichage - Produit: PRODUITS - Lister PRODUITS
